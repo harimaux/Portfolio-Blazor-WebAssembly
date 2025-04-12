@@ -1,0 +1,112 @@
+[
+  {
+    "fileName": "csharp.png",
+    "name": "C#",
+    "level": "80"
+  },
+  {
+    "fileName": "blazor.png",
+    "name": "Blazor",
+    "level": "75"
+  },
+  {
+    "fileName": "devops.png",
+    "name": "DevOps",
+    "level": "75"
+  },
+  {
+    "fileName": "dotNet.png",
+    "name": ".NET",
+    "level": "80"
+  },
+  {
+    "fileName": "git.png",
+    "name": "Git",
+    "level": "75"
+  },
+  {
+    "fileName": "mysql_logo.png",
+    "name": "MySQL",
+    "level": "75"
+  },
+  {
+    "fileName": "ef.png",
+    "name": "Entity Framework",
+    "level": ""
+  },
+  {
+    "fileName": "sqlstudio.png",
+    "name": "SQL Server Management Studio",
+    "level": "70"
+  },
+  {
+    "fileName": "IIS.png",
+    "name": "IIS",
+    "level": "70"
+  },
+  {
+    "fileName": "html_logo.png",
+    "name": "HTML",
+    "level": "90"
+  },
+  {
+    "fileName": "bootstrap_logo.png",
+    "name": "Bootstrap",
+    "level": "60"
+  },
+  {
+    "fileName": "css_logo.png",
+    "name": "CSS",
+    "level": "70"
+  },
+  {
+    "fileName": "jquery_logo.png",
+    "name": "jQuery",
+    "level": "65"
+  },
+  {
+    "fileName": "js_logo.png",
+    "name": "JavaScript",
+    "level": "75"
+  },
+  {
+    "fileName": "linux_logo.png",
+    "name": "Linux",
+    "level": "30"
+  },
+  {
+    "fileName": "php_logo.png",
+    "name": "PHP",
+    "level": "20"
+  },
+  {
+    "fileName": "ps_logo.png",
+    "name": "Photoshop",
+    "level": "35"
+  },
+  {
+    "fileName": "react_logo.png",
+    "name": "React",
+    "level": "25"
+  },
+  {
+    "fileName": "sass_logo.png",
+    "name": "SASS",
+    "level": "30"
+  },
+  {
+    "fileName": "vscode_logo.png",
+    "name": "Visual Studio",
+    "level": "85"
+  },
+  {
+    "fileName": "docker.png",
+    "name": "Docker",
+    "level": "30"
+  },
+  {
+    "fileName": "rust.png",
+    "name": "Rust",
+    "level": "25"
+  }
+]

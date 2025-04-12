@@ -1,0 +1,10 @@
+﻿To build the project type: dotnet publish -c Release -o ./publish
+
+SCSS
+{
+  "scripts": {
+    "scss": "sass --watch wwwroot/css/home.scss:wwwroot/css/home.css"
+  }
+}
+
+run in console: sass --watch wwwroot/css/home.scss:wwwroot/css/home.css to watch scss

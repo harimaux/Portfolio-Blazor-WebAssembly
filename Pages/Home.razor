@@ -1,0 +1,120 @@
+﻿@page "/"
+@inject IJSRuntime JSRuntime
+@inject HttpClient Http
+
+<div class="homeMainBackgroundTexture"></div>
+
+<div class="homeContainer">
+    <div class="homeBox">
+
+        <div class="homeTitle">
+            <span class="homeBlock"></span>
+            <h1>Hi, I'm Lucas<span></span></h1>
+        </div>
+
+        <div class="homeRole">
+            <div class="block"></div>
+            <p>Full-Stack Dev</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="homeBackgroundBox">
+    <div class="homeBackgroundBoxRelative">
+        <img src="/Images/Home/Backgrounds/net_background_1.png" alt="Background" />
+        <div class="topDigitsContainer">
+            <div class="topDigits" id="topDigitsRef"></div>
+        </div>
+        <div class="topDigitsContainer2">
+            <div class="topDigits2" id="topDigitsRef2"></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="homeTechIconsContainer">
+
+    <div class="homeTechIconsDisplay">
+
+        <div class="homeTechIconsHead">
+            <img src="Images/Home/Backgrounds/cyberpunk_head.png" alt="Cyberpunk Head">
+        </div>
+        <div class="homeTechIconsBackground">
+            <p>Tech Scan</p>
+            <img src="Images/Home/Backgrounds/techLogoBackground.png" alt="techLogoBackground">
+            <div class="homeTechIconsBackgroundLogo">
+                @((MarkupString)logoImage)
+            </div>
+            <div class="homeTechIconsBackgroundInfo">
+                @((MarkupString)logoInfo)
+            </div>
+            
+        </div>
+        <div class="laserLeft"></div>
+        <div class="laserRight"></div>
+    </div>
+</div>
+
+<script src="/Script/Home.js"></script>
+
+@code {
+
+    public class TechLogo
+    {
+        public string FileName { get; set; } = "";
+        public string Name { get; set; } = "";
+        public string Level { get; set; } = "";
+    }
+
+    private List<TechLogo>? techLogos = new();
+    private int numberOfLogos = 0;
+    private int counter = 0;
+    private PeriodicTimer? periodicTimer;
+    private string logoImage = "";
+    private string logoInfo = "<p>Loading...</p>";
+
+    //TODO: Check if the JavaScript method can be transformed to C# code
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("startTopDigitsAnimation");
+
+            techLogos = await Http.GetFromJsonAsync<List<TechLogo>>("techlogos.json");
+            numberOfLogos = techLogos?.Count ?? 0;
+            await ShowLogos();
+
+            StateHasChanged();
+        }
+    }
+
+    private async Task ShowLogos()
+    {
+        periodicTimer = new PeriodicTimer(TimeSpan.FromSeconds(4));
+
+        if (techLogos != null && techLogos.Count > 0)
+        {
+            while (await periodicTimer.WaitForNextTickAsync())
+            {
+                var logo = techLogos[counter];
+
+                logoImage = $"<img src='Images/Home/TechLogos/{logo.FileName}' alt='{logo.Name}' />";
+                logoInfo = $"<p>{logo.Name}</br>{logo.Level}%</p>";
+
+                counter++;
+                if (counter >= numberOfLogos)
+                {
+                    counter = 0;
+                }
+
+                await InvokeAsync(StateHasChanged);
+            }
+        }
+    }
+
+
+    
+
+
+}

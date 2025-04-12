@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  },
+  "scripts": {
+    "scss": "sass --watch wwwroot/css/home.scss:wwwroot/css/home.css"
+  }
+}
