@@ -3,7 +3,7 @@
     "animate.css": "^4.1.1"
   },
   "scripts": {
-    "scss": "sass --watch Pages/Home.razor.scss:Pages/Home.razor.css Pages/About.razor.scss:Pages/About.razor.css"
+    "scss": "sass --watch Pages/Home.razor.scss:Pages/Home.razor.css Pages/About.razor.scss:Pages/About.razor.css Pages/Contact.razor.scss:Pages/Contact.razor.css Pages/Projects.razor.scss:Pages/Projects.razor.css"
   },
   "-vs-binding": {
     "ProjectOpened": [
