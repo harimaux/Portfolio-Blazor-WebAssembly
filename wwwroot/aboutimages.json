@@ -1,0 +1,50 @@
+[
+  {
+    "id": "guitar1",
+    "image": "Images/About/guitar.jpg",
+    "title": "Guitar",
+    "description": "I love playing electric guitar..."
+  },
+  {
+    "id": "guitar2",
+    "image": "Images/About/guitar2.jpeg",
+    "title": "Guitar",
+    "description": "Still guitar-related text..."
+  },
+  {
+    "id": "code1",
+    "image": "Images/About/code.jpg",
+    "title": "Coding",
+    "description": "I write code in C#, Blazor, React..."
+  },
+  {
+    "id": "code2",
+    "image": "Images/About/code2.jpg",
+    "title": "Coding",
+    "description": "More coding adventures..."
+  },
+  {
+    "id": "design",
+    "image": "Images/About/design.jpg",
+    "title": "Design",
+    "description": "I enjoy UI/UX design..."
+  },
+  {
+    "id": "chess",
+    "image": "Images/About/chess.jpg",
+    "title": "Chess",
+    "description": "Chess is my mental gym..."
+  },
+  {
+    "id": "galaxy",
+    "image": "Images/About/galaxy.jpg",
+    "title": "Space",
+    "description": "I’m fascinated by astronomy..."
+  },
+  {
+    "id": "retro",
+    "image": "Images/About/retro.jpg",
+    "title": "Retro Tech",
+    "description": "Love vintage computers..."
+  }
+]

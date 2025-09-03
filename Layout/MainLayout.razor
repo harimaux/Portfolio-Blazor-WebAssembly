@@ -8,7 +8,7 @@
 <MudLayout>
     <MudAppBar Elevation="1">
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
-        <MudText Typo="Typo.h5" Class="ml-3">My Portfolio</MudText>
+        <MudText Typo="Typo.h5" Class="ml-3">Dev Portfolio</MudText>
     </MudAppBar>
     <MudDrawer @bind-Open="@_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2">
         <NavMenu/>
@@ -20,8 +20,8 @@
 
 
 @code {
-    bool _drawerOpen = true;
-    private bool _isDarkMode;
+    bool _drawerOpen = false;
+    private bool _isDarkMode = true;
     private MudThemeProvider _mudThemeProvider = new MudThemeProvider();
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -29,7 +29,7 @@
         if (firstRender)
         {
             //_isDarkMode = await _mudThemeProvider.GetSystemPreference();
-            _isDarkMode = true;
+
             await InvokeAsync(StateHasChanged);
         }
     }

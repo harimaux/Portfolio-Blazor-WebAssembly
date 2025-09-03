@@ -8,3 +8,19 @@ SCSS
 }
 
 run in console: sass --watch wwwroot/css/home.scss:wwwroot/css/home.css to watch scss
+sass --watch Pages/About.scss:Pages/About.css
+
+
+JSON:
+
+//{
+//  "dependencies": {
+//    "animate.css": "^4.1.1"
+//  },
+//  "scripts": {
+//    "scss": "sass --watch Pages/Home.razor.scss:Pages/Home.razor.css Pages/About.razor.scss:Pages/About.razor.css"
+//  },
+//  "-vs-binding": {
+//    "ProjectOpened": [ "scss" ]
+//  }
+//}

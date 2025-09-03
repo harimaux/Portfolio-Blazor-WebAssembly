@@ -1,0 +1,11 @@
+﻿@* <MudImage Src="Images/About/guitar.jpg" Alt="guitar 1" Width="200" Class="mud-rounded-full mud-elevation-6" />
+<MudImage Src="Images/About/guitar2.jpeg" Alt="guitar 2" Width="200" Class="mud-rounded-full mud-elevation-6" />
+
+<MudImage Src="Images/About/code.jpg" Alt="code 1" Width="200" Class="mud-rounded-full mud-elevation-6" />
+<MudImage Src="Images/About/code2.jpg" Alt="code 2" Width="200" Class="mud-rounded-full mud-elevation-6" />
+
+<MudImage Src="Images/About/design.jpg" Alt="design" Width="200" Class="mud-rounded-full mud-elevation-6" />
+<MudImage Src="Images/About/chess.jpg" Alt="chess" Width="200" Class="mud-rounded-full mud-elevation-6" />
+
+<MudImage Src="Images/About/galaxy.jpg" Alt="galaxy" Width="200" Class="mud-rounded-full mud-elevation-6" />
+<MudImage Src="Images/About/retro.jpg" Alt="retro" Width="200" Class="mud-rounded-full mud-elevation-6" /> *@
