@@ -1,5 +1,7 @@
 Portfolio Web App
+
 - Blazor WebAssembly
+- MudBlazor
 - Some JS
-- CSS Isolation
+- CSS Isolation/SASS
 - Cyberpunk style
