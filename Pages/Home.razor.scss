@@ -1,8 +1,4 @@
-﻿body {
-    overflow: hidden;
-}
-
-.homeMainBackgroundTexture {
+﻿.homeMainBackgroundTexture {
     background: url('../Images/Home/Backgrounds/background_3673.png') no-repeat center center fixed;
     background-size: cover;
     position: absolute;
@@ -46,7 +42,6 @@
                 /*font-family: 'Poppins';*/
                 color: #fff;
                 font-size: 60px;
-                -webkit-animation: mainFadeIn 2s forwards;
                 -o-animation: mainFadeIn 2s forwards;
                 animation: mainFadeIn 2s forwards;
                 animation-delay: 1.6s;
@@ -58,11 +53,9 @@
                 span {
                     width: 0px;
                     height: 0px;
-                    -webkit-border-radius: 50%;
                     -moz-border-radius: 50%;
                     border-radius: 50%;
                     background: #ffb510;
-                    -webkit-animation: load 0.6s cubic-bezier(.74, .06, .4, .92) forwards;
                     animation: popIn 0.8s cubic-bezier(.74, .06, .4, .92) forwards;
                     animation-delay: 2s;
                     margin-left: 5px;
@@ -228,12 +221,10 @@
     position: absolute;
     right: -150px;
     top: 100px;
-    -webkit-transform: rotate(43deg);
     transform: rotate(43deg);
 }
 
 .topDigitsAnimation {
-    -webkit-animation: topDigitsAnimationFrames 6s ease-in-out forwards;
     animation: topDigitsAnimationFrames 6s ease-in-out forwards;
     position: absolute;
     color: red;
@@ -241,32 +232,9 @@
     text-shadow: 0 0 7px red, 0 0 10px red, 0 0 21px red;
 }
 
-@-webkit-keyframes topDigitsAnimationFrames {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    75% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        -webkit-transform: translateY(70vh);
-        transform: translateY(70vh);
-    }
-}
-
 @keyframes topDigitsAnimationFrames {
     0% {
         opacity: 0;
-        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
 
@@ -280,7 +248,6 @@
 
     100% {
         opacity: 0;
-        -webkit-transform: translateY(70vh);
         transform: translateY(70vh);
     }
 }
@@ -291,7 +258,6 @@
     position: absolute;
     right: 100px;
     top: 70%;
-    -webkit-transform: rotate(136deg);
     transform: rotate(136deg);
 }
 
@@ -520,7 +486,6 @@
         position: absolute;
         right: 0;
         top: 0px; //changed
-        -webkit-transform: rotate(0deg); //changed
         transform: rotate(0deg); //changed
     }
 
@@ -532,12 +497,10 @@
         right: unset; //changed
         left: 0; //changed
         top: 0px; //changed
-        -webkit-transform: rotate(0deg); //changed
         transform: rotate(0deg); //changed
     }
 
     .topDigitsAnimation {
-        -webkit-animation: topDigitsAnimationFrames 3s ease-in-out forwards;
         animation: topDigitsAnimationFrames 3s ease-in-out forwards;
         position: absolute;
         color: red;
@@ -545,32 +508,9 @@
         text-shadow: 0 0 7px red, 0 0 10px red, 0 0 21px red;
     }
 
-    @-webkit-keyframes topDigitsAnimationFrames {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-        }
-
-        25% {
-            opacity: 1;
-        }
-
-        75% {
-            opacity: 1;
-        }
-
-        100% {
-            opacity: 0;
-            -webkit-transform: translateY(20vh); //changed
-            transform: translateY(20vh); //changed
-        }
-    }
-
     @keyframes topDigitsAnimationFrames {
         0% {
             opacity: 0;
-            -webkit-transform: translateY(0);
             transform: translateY(0);
         }
 
@@ -584,7 +524,6 @@
 
         100% {
             opacity: 0;
-            -webkit-transform: translateY(20vh); //changed
             transform: translateY(20vh); //changed
         }
     }

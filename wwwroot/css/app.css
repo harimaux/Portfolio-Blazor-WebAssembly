@@ -5,14 +5,14 @@ html, body {
     box-sizing: border-box;
 }
 
-body {
+/*body {
     overflow-x: hidden;
-}
+    overflow-y: hidden;
+}*/
 
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently
@@ -21,9 +21,6 @@ body {
 
 img {
     -webkit-user-drag: none;
-    -khtml-user-drag: none;
-    -moz-user-drag: none;
-    -o-user-drag: none;
 }
 
 h1:focus {
@@ -158,5 +155,132 @@ code {
 
     100% {
         background-position: 50% 100%,0 0,50%
+    }
+}
+
+/* GLOBAL ANIMATION CLASSES */
+/* MUST BE LOCATED HERE AS BLAZOR REPLACES AMENDS CLASSES (WEIRD) */
+
+.topDigitsAnimation {
+    animation: topDigitsAnimationFrames 6s ease-in-out forwards;
+    position: absolute;
+    color: red;
+    font-size: 24px;
+    text-shadow: 0 0 7px red, 0 0 10px red, 0 0 21px red;
+}
+
+@keyframes topDigitsAnimationFrames {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(70vh);
+    }
+}
+
+/*CYBER HEAD ANIMATION*/
+
+.homeTechIconsBackground p {
+    font-family: "Press Start 2P", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: center;
+    color: red;
+    font-size: 24px;
+    text-shadow: 0 0 7px red, 0 0 10px red, 0 0 21px red;
+    margin-bottom: .5rem;
+}
+
+.homeTechIconsBackground img {
+    width: 230px;
+    box-shadow: 0 0 18px 18px rgba(50, 51, 61, 1) inset;
+}
+
+.homeTechIconsBackgroundLogo {
+    position: absolute;
+    top: 118px;
+    right: 80px;
+}
+
+.homeTechIconsBackgroundLogo img {
+    width: 70px;
+}
+
+.homeTechIconsBackgroundInfo {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@keyframes glitchyAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(-10px) translateX(1px);
+        filter: blur(5px) hue-rotate(0deg);
+    }
+
+    20% {
+        opacity: 0.3;
+        transform: scale(0.7) translateY(-5px) translateX(-1px);
+        filter: blur(4px) hue-rotate(20deg);
+    }
+
+    40% {
+        opacity: 0.6;
+        transform: scale(0.9) translateY(-2px) translateX(1px);
+        filter: blur(3px) hue-rotate(0deg);
+    }
+
+    60% {
+        opacity: 0.8;
+        transform: scale(1) translateY(0px) translateX(-1px);
+        filter: blur(2px) hue-rotate(-20deg);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1.1) translateY(0px) translateX(1px);
+        filter: blur(1px) hue-rotate(0deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0px) translateX(0px);
+        filter: blur(0px) hue-rotate(0deg);
+    }
+}
+
+.homeTechIconsBackgroundLogo img {
+    animation: glitchyAppear 0.8s ease-out forwards, glitchFlicker 0.3s infinite alternate 0.8s;
+}
+
+@keyframes glitchFlicker {
+    0% {
+        opacity: 0.8;
+        transform: translateX(1px);
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(-1px);
+        filter: hue-rotate(20deg);
+    }
+
+    100% {
+        opacity: 0.9;
+        transform: translateX(0px);
     }
 }

@@ -39,4 +39,3 @@ window.startTechLogosAnimation = function () {
 
     console.log(techBox)
 };
-

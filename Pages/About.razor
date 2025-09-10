@@ -1,26 +1,55 @@
 ﻿@page "/about"
+@inject IJSRuntime JS
 
-@* <img src="Images/About/guitar.jpg" />
-<img src="Images/About/guitar2.jpeg" />
+<div class="aboutImageBox" style="margin-top:200px;">
+    <img src="Images/About/guitar.jpg" class="scroll-animate" />
+</div>
 
-<img src="Images/About/code.jpg" />
-<img src="Images/About/code2.jpg" />
+<div class="aboutImageBox">
+    <img src="Images/About/guitar2.jpeg" class="scroll-animate" />
+</div>
 
-<img src="Images/About/design.jpg" />
-<img src="Images/About/chess.jpg"/>
+<div class="aboutImageBox">
+    <img src="Images/About/code.jpg" class="scroll-animate" />
+</div>
 
-<img src="Images/About/galaxy.jpg" />
-<img src="Images/About/retro.jpg" /> *@
+<div class="aboutImageBox">
+    <img src="Images/About/code2.jpg" class="scroll-animate" />
+</div>
 
-<h1>HELLO</h1>
+<div class="aboutImageBox">
+    <img src="Images/About/design.jpg" class="scroll-animate" />
+</div>
 
+<div class="aboutImageBox">
+    <img src="Images/About/chess.jpg" class="scroll-animate" />
+</div>
 
-@*<script src="/Script/About.js"></script> *@
+<div class="aboutImageBox">
+    <img src="Images/About/galaxy.jpg" class="scroll-animate" />
+</div>
+
+<div class="aboutImageBox">
+    <img src="Images/About/retro.jpg" class="scroll-animate" />
+</div>
+
+<style>
+    img.scroll-animate {
+        opacity: 0;
+        transform: translateY(150px);
+    }
+
+    .aboutImageBox {
+        margin-bottom: 500px;
+    }
+</style>
 
 @code {
-
-
-
-
-
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("About.initScrollAnimations");
+        }
+    }
 }
